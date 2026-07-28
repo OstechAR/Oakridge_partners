@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Financial Resources | Oakridge Partners</title>
+
+<meta name="description" content="Explore financial education resources based on your goals with Oakridge Partners.">
+
+
+<style>
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body {
+
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.6;
+
+}
+
+
+header {
+
+    background:white;
+    padding:20px 8%;
+    border-bottom:1px solid #e2e8f0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.logo {
+
+    font-size:26px;
+    font-weight:bold;
+    color:#0f172a;
+
+}
+
+
+nav a {
+
+    text-decoration:none;
+    color:#334155;
+
+}
+
+
+
+.container {
+
+    max-width:900px;
+    margin:60px auto;
+    padding:0 25px;
+
+}
+
+
+
+.hero {
+
+    background:#eff6ff;
+    padding:40px;
+    border-radius:20px;
+    margin-bottom:35px;
+
+}
+
+
+.hero h1 {
+
+    font-size:42px;
+    margin-bottom:15px;
+    color:#0f172a;
+
+}
+
+
+
+.card {
+
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    margin-bottom:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+
+
+.card h2 {
+
+    color:#1d4ed8;
+    margin-bottom:20px;
+
+}
+
+
+
+.resource {
+
+    border-left:4px solid #1d4ed8;
+    padding-left:20px;
+    margin-bottom:25px;
+
+}
+
+
+
+.button {
+
+    display:inline-block;
+    padding:14px 28px;
+    background:#1d4ed8;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+
+}
+
+
+
+.button:hover {
+
+    background:#1e40af;
+
+}
+
+
+
+.secondary {
+
+    background:#64748b;
+
+}
+
+
+
+.disclaimer {
+
+    background:#f1f5f9;
+    padding:20px;
+    border-radius:12px;
+    font-size:14px;
+    color:#475569;
+
+}
+
+
+
+footer {
+
+    margin-top:60px;
+    padding:40px 8%;
+    background:#020617;
+    color:#cbd5e1;
+
+}
+
+
+
+@media(max-width:700px){
+
+.hero h1 {
+
+font-size:34px;
+
+}
+
+header {
+
+flex-direction:column;
+gap:15px;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+<div class="logo">
+Oakridge Partners
+</div>
+
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+</nav>
+
+</header>
+
+
+
+
+
+
+<div class="container">
+
+
+
+<div class="hero">
+
+
+<h1 id="headline">
+Your Financial Learning Profile
+</h1>
+
+
+<p id="summary">
+Based on your answers, we have selected resources that may help you better understand your options.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+Your Focus
+</h2>
+
+
+<h3 id="topic">
+Loading...
+</h3>
+
+
+<p id="goal">
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+Recommended Resources To Explore
+</h2>
+
+
+
+<div id="resources">
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+Next Steps
+</h2>
+
+
+<p>
+Continue learning about your selected topic, review available resources, and decide what information is most useful for your situation.
+</p>
+
+
+<br>
+
+
+<a href="index.html" class="button">
+Return Home
+</a>
+
+
+<a href="questionnaire.html" class="button secondary">
+Restart Questionnaire
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="disclaimer">
+
+<strong>Disclaimer:</strong>
+
+Oakridge Partners provides educational information and referral resources. Results are based only on the information provided in this questionnaire and should not be considered financial advice or a recommendation to purchase any financial product.
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+Oakridge Partners © 2026
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+const answers =
+JSON.parse(localStorage.getItem("oakridgeAnswers"));
+
+
+
+const topicElement =
+document.getElementById("topic");
+
+
+const goalElement =
+document.getElementById("goal");
+
+
+const resourcesElement =
+document.getElementById("resources");
+
+
+
+
+if(!answers){
+
+
+document.getElementById("headline").innerText =
+"Let's Find Your Resources";
+
+
+document.getElementById("summary").innerText =
+"Complete the questionnaire first so we can understand what financial topics interest you.";
+
+
+topicElement.innerHTML =
+'<a href="questionnaire.html">Start Questionnaire</a>';
+
+
+
+}
+
+else {
+
+
+
+const profiles = {
+
+
+credit:{
+
+
+title:
+"Credit Education",
+
+
+description:
+"You are interested in understanding credit, credit scores, and building financial knowledge.",
+
+
+resources:[
+
+{
+title:"Understanding Credit Scores",
+
+text:"Learn what credit scores are, why they matter, and what factors can influence them."
+},
+
+{
+title:"Building Credit History",
+
+text:"Explore common strategies Canadians use when establishing or improving credit history."
+},
+
+{
+title:"Monitoring Credit Information",
+
+text:"Learn about tools that can help people stay informed about their credit information."
+}
+
+]
+
+},
+
+
+
+loans:{
+
+
+title:
+"Loan Education",
+
+
+description:
+"You are interested in understanding borrowing options and how loans work.",
+
+
+resources:[
+
+{
+title:"How Personal Loans Work",
+
+text:"Learn about loan terms, interest rates, repayment structures, and common considerations."
+},
+
+{
+title:"Understanding Borrowing Costs",
+
+text:"Explore how interest rates and fees affect borrowing."
+},
+
+{
+title:"Questions To Ask Before Borrowing",
+
+text:"Learn what factors to consider before exploring lending options."
+}
+
+]
+
+},
+
+
+
+
+banking:{
+
+
+title:
+"Banking Education",
+
+
+description:
+"You are interested in learning about banking products and account features.",
+
+
+resources:[
+
+{
+title:"Choosing A Bank Account",
+
+text:"Understand common account features, fees, and services."
+},
+
+{
+title:"Savings Basics",
+
+text:"Learn how savings accounts and financial tools generally work."
+},
+
+{
+title:"Digital Banking Options",
+
+text:"Explore modern banking features and services."
+
+}
+
+]
+
+},
+
+
+
+
+insurance:{
+
+
+title:
+"Insurance Education",
+
+
+description:
+"You are interested in understanding insurance categories and protection options.",
+
+
+resources:[
+
+{
+title:"Types Of Insurance",
+
+text:"Learn about common insurance categories and what they are designed to protect."
+},
+
+{
+title:"Understanding Coverage",
+
+text:"Explore how insurance policies, premiums, and coverage generally work."
+},
+
+{
+title:"Insurance Questions To Consider",
+
+text:"Learn what information people commonly review when exploring insurance."
+
+}
+
+]
+
+}
+
+
+
+};
+
+
+
+const profile =
+profiles[answers.topic] || profiles.credit;
+
+
+
+topicElement.innerText =
+profile.title;
+
+
+
+goalElement.innerText =
+profile.description;
+
+
+
+profile.resources.forEach(resource=>{
+
+
+const div =
+document.createElement("div");
+
+
+div.className="resource";
+
+
+div.innerHTML =
+`
+<h3>${resource.title}</h3>
+<p>${resource.text}</p>
+`;
+
+
+resourcesElement.appendChild(div);
+
+
+});
+
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
