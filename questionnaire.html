@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Financial Questionnaire | Oakridge Partners</title>
+
+<meta name="description" content="Answer a few questions to discover financial education resources related to credit, loans, banking, and insurance.">
+
+
+<style>
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body {
+
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.6;
+
+}
+
+
+header {
+
+    background:white;
+    padding:20px 8%;
+    border-bottom:1px solid #e2e8f0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.logo {
+
+    font-size:26px;
+    font-weight:bold;
+    color:#0f172a;
+
+}
+
+
+nav a {
+
+    margin-left:20px;
+    text-decoration:none;
+    color:#334155;
+
+}
+
+
+.container {
+
+    max-width:800px;
+    margin:60px auto;
+    padding:0 25px;
+
+}
+
+
+
+.card {
+
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 5px 25px rgba(0,0,0,.06);
+
+}
+
+
+h1 {
+
+    font-size:42px;
+    color:#0f172a;
+    margin-bottom:15px;
+
+}
+
+
+.intro {
+
+    color:#475569;
+    margin-bottom:35px;
+
+}
+
+
+
+.progress-container {
+
+    background:#e2e8f0;
+    height:10px;
+    border-radius:10px;
+    margin-bottom:35px;
+
+}
+
+
+.progress {
+
+    height:10px;
+    width:33%;
+    background:#1d4ed8;
+    border-radius:10px;
+
+}
+
+
+
+.question {
+
+    display:none;
+
+}
+
+
+.question.active {
+
+    display:block;
+
+}
+
+
+h2 {
+
+    margin-bottom:25px;
+
+}
+
+
+
+.option {
+
+    display:block;
+    border:2px solid #e2e8f0;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    cursor:pointer;
+    transition:.2s;
+
+}
+
+
+.option:hover {
+
+    border-color:#1d4ed8;
+    background:#eff6ff;
+
+}
+
+
+.option input {
+
+    margin-right:10px;
+
+}
+
+
+
+.buttons {
+
+    margin-top:30px;
+    display:flex;
+    justify-content:space-between;
+
+}
+
+
+
+button {
+
+    border:none;
+    padding:14px 30px;
+    border-radius:8px;
+    background:#1d4ed8;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+
+button.secondary {
+
+    background:#64748b;
+
+}
+
+
+
+.disclaimer {
+
+    margin-top:30px;
+    padding:20px;
+    background:#f1f5f9;
+    border-radius:10px;
+    font-size:14px;
+    color:#475569;
+
+}
+
+
+
+footer {
+
+    margin-top:60px;
+    padding:40px 8%;
+    background:#020617;
+    color:#cbd5e1;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+<div class="logo">
+Oakridge Partners
+</div>
+
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+<h1>
+Find Your Financial Resources
+</h1>
+
+
+<p class="intro">
+Answer three quick questions so we can show you educational resources related to your goals.
+</p>
+
+
+
+<div class="progress-container">
+
+<div class="progress" id="progress"></div>
+
+</div>
+
+
+
+
+
+<form id="financialForm">
+
+
+
+<!-- QUESTION 1 -->
+
+<div class="question active">
+
+
+<h2>
+What financial topic are you interested in?
+</h2>
+
+
+
+<label class="option">
+
+<input type="radio" name="topic" value="credit">
+
+Credit and building financial history
+
+</label>
+
+
+
+<label class="option">
+
+<input type="radio" name="topic" value="loans">
+
+Understanding loans and borrowing
+
+</label>
+
+
+
+<label class="option">
+
+<input type="radio" name="topic" value="banking">
+
+Banking products and accounts
+
+</label>
+
+
+
+<label class="option">
+
+<input type="radio" name="topic" value="insurance">
+
+Insurance education
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- QUESTION 2 -->
+
+
+<div class="question">
+
+
+<h2>
+What best describes your current goal?
+</h2>
+
+
+
+<label class="option">
+
+<input type="radio" name="goal" value="learn">
+
+I want to learn more about financial topics
+
+</label>
+
+
+
+<label class="option">
+
+<input type="radio" name="goal" value="compare">
+
+I want to compare available options
+
+</label>
+
+
+
+<label class="option">
+
+<input type="radio" name="goal" value="improve">
+
+I want to improve my financial situation
+
+</label>
+
+
+
+<label class="option">
+
+<input type="radio" name="goal" value="research">
+
+I am researching before making a decision
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- QUESTION 3 -->
+
+
+<div class="question">
+
+
+<h2>
+How familiar are you with this topic?
+</h2>
+
+
+
+<label class="option">
+
+<input type="radio" name="experience" value="beginner">
+
+I am just starting to learn
+
+</label>
+
+
+
+<label class="option">
+
+<input type="radio" name="experience" value="some">
+
+I understand the basics
+
+</label>
+
+
+
+<label class="option">
+
+<input type="radio" name="experience" value="advanced">
+
+I already have experience
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="buttons">
+
+
+<button type="button" class="secondary" id="back">
+
+Back
+
+</button>
+
+
+<button type="button" id="next">
+
+Continue
+
+</button>
+
+
+</div>
+
+
+
+</form>
+
+
+
+
+
+
+<div class="disclaimer">
+
+<strong>Important:</strong>
+
+Oakridge Partners provides educational information and referral resources. We do not provide financial advice, guarantee approval, or make decisions on behalf of financial institutions.
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+Oakridge Partners © 2026
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+let currentQuestion = 0;
+
+
+const questions = document.querySelectorAll(".question");
+
+const progress = document.getElementById("progress");
+
+const nextButton = document.getElementById("next");
+
+const backButton = document.getElementById("back");
+
+
+let answers = {};
+
+
+
+
+function updateQuestion(){
+
+
+questions.forEach((q,index)=>{
+
+q.classList.toggle(
+"active",
+index === currentQuestion
+);
+
+});
+
+
+progress.style.width =
+((currentQuestion+1)/questions.length)*100+"%";
+
+
+
+backButton.style.display =
+currentQuestion === 0 ? "none" : "block";
+
+
+
+nextButton.innerText =
+currentQuestion === questions.length-1
+? "See Results"
+: "Continue";
+
+
+}
+
+
+
+function saveAnswer(){
+
+
+const current = questions[currentQuestion];
+
+const selected =
+current.querySelector("input:checked");
+
+
+
+if(!selected){
+
+alert("Please select an option before continuing.");
+
+return false;
+
+}
+
+
+
+answers[selected.name] = selected.value;
+
+return true;
+
+
+}
+
+
+
+
+nextButton.addEventListener("click",()=>{
+
+
+if(!saveAnswer()) return;
+
+
+
+if(currentQuestion < questions.length-1){
+
+
+currentQuestion++;
+
+updateQuestion();
+
+
+}
+
+else{
+
+
+localStorage.setItem(
+"oakridgeAnswers",
+JSON.stringify(answers)
+);
+
+
+window.location.href="results.html";
+
+
+}
+
+
+});
+
+
+
+
+
+backButton.addEventListener("click",()=>{
+
+
+if(currentQuestion>0){
+
+currentQuestion--;
+
+updateQuestion();
+
+}
+
+
+});
+
+
+
+updateQuestion();
+
+
+</script>
+
+
+
+</body>
+
+</html>
