@@ -673,7 +673,7 @@ renderOffers(offers);
 
 if(questionContainer){
 
-loadQuestion();
+loadQuestionnaire();
 
 }
 
