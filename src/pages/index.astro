@@ -1,0 +1,329 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils/site';
+
+const categories = (await getCollection('categories')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const featuredOffers = (await getCollection('marketplace'))
+  .filter((offer) => offer.data.featured && !offer.data.draft)
+  .sort((a, b) => b.data.priority - a.data.priority)
+  .slice(0, 3);
+
+const offerProviders = await Promise.all(
+  featuredOffers.map((offer) => getEntry(offer.data.provider))
+);
+
+const newestArticles = (await getCollection('articles'))
+  .filter((article) => !article.data.draft)
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title="Oakridge Partners | Financial Education & Options for Canadians"
+  description="Oakridge Partners helps Canadians understand credit, loans, banking, and insurance options through simple educational resources and comparison tools."
+  home
+>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Understand Your Financial Options</h1>
+      <p>
+        Oakridge Partners helps Canadians explore credit, loans, banking, and
+        insurance options through simple educational tools designed around
+        their goals.
+      </p>
+      <a href={withBase('questionnaire.html')} class="button">Find My Options</a>
+    </div>
+
+    <div class="hero-box">
+      <h3>Financial decisions can be complicated.</h3>
+      <p>
+        We organize information and resources so you can better understand
+        your choices before deciding what options to explore.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Explore Financial Topics</h2>
+      <p>Learn the basics before exploring available services.</p>
+    </div>
+
+    <div class="cards">
+      {
+        categories.map((category) => (
+          <div class="card">
+            <h3>{category.data.homeCardTitle}</h3>
+            <p>{category.data.homeCardDescription}</p>
+            <a href={withBase(`${category.id}.html`)}>Learn More →</a>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  {
+    featuredOffers.length > 0 && (
+      <section id="offers">
+        <div class="section-title">
+          <h2>Featured Offers</h2>
+          <p>A few partner options worth exploring right now.</p>
+        </div>
+
+        <div class="cards">
+          {featuredOffers.map((offer, i) => (
+            <div class="card">
+              {offerProviders[i] && (
+                <p class="provider-name">{offerProviders[i]!.data.name}</p>
+              )}
+              <h3>{offer.data.title}</h3>
+              <p>{offer.data.summary}</p>
+              <a
+                href={offer.data.affiliateUrl}
+                class="button"
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+              >
+                {offer.data.buttonText}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    newestArticles.length > 0 && (
+      <section id="articles">
+        <div class="section-title">
+          <h2>Newest Articles</h2>
+          <p>Fresh educational resources to help you get informed.</p>
+        </div>
+
+        <div class="cards">
+          {newestArticles.map((article) => (
+            <div class="card">
+              <h3>
+                <a href={withBase(`articles/${article.id}.html`)}>
+                  {article.data.title}
+                </a>
+              </h3>
+              <p>{article.data.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section id="how">
+    <div class="section-title">
+      <h2>How Oakridge Partners Works</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Answer Questions</h3>
+        <p>Tell us what financial topics you want to understand.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Explore Resources</h3>
+        <p>Receive information based on your goals and interests.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Review Options</h3>
+        <p>Explore services from potential partners if you choose.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Find Resources Based On Your Goals</h2>
+    <p>
+      Complete a short questionnaire and discover financial topics that may
+      be relevant to you.
+    </p>
+    <a href={withBase('questionnaire.html')} class="button">Start Questionnaire</a>
+  </section>
+
+  <section class="about" id="about">
+    <div class="section-title">
+      <h2>About Oakridge Partners</h2>
+    </div>
+
+    <div class="card">
+      <p>
+        Oakridge Partners is a financial education and referral platform
+        designed to help Canadians better understand financial products and
+        services.
+      </p>
+      <br />
+      <p>
+        Our goal is to simplify complex financial topics and provide access
+        to resources that help users make more informed decisions.
+      </p>
+      <br />
+      <p>
+        Oakridge Partners does not provide financial advice, guarantee
+        approval, or make recommendations on behalf of financial
+        institutions.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Homepage-only design: mirrors the original standalone hero/card
+     treatment, which intentionally differs slightly from the shared
+     inner-page design system in global.css. */
+
+  .hero {
+    background: white;
+    padding: 90px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .hero-content {
+    max-width: 650px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    color: #0f172a;
+    margin-bottom: 25px;
+  }
+
+  .hero p {
+    font-size: 20px;
+    color: #475569;
+    margin-bottom: 35px;
+  }
+
+  .button {
+    display: inline-block;
+    background: #1d4ed8;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .button:hover {
+    background: #1e40af;
+  }
+
+  .hero-box {
+    background: #eff6ff;
+    padding: 35px;
+    border-radius: 20px;
+    max-width: 350px;
+  }
+
+  .hero-box h3 {
+    margin-bottom: 15px;
+  }
+
+  section {
+    padding: 70px 8%;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .section-title h2 {
+    font-size: 36px;
+    color: #0f172a;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .card h3 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+  }
+
+  .provider-name {
+    font-size: 13px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .step {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  .step-number {
+    font-size: 35px;
+    font-weight: bold;
+    color: #1d4ed8;
+  }
+
+  .cta {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 8% 70px;
+  }
+
+  .cta h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .cta p {
+    margin-bottom: 30px;
+  }
+
+  .about {
+    background: white;
+  }
+
+  @media (max-width: 850px) {
+    .hero {
+      flex-direction: column;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+    }
+  }
+</style>

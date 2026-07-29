@@ -1,0 +1,25 @@
+---
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  external?: boolean;
+  class?: string;
+}
+
+const { href, variant = 'primary', external = false, class: className = '' } = Astro.props;
+const classes = ['button', variant === 'secondary' ? 'secondary' : '', className]
+  .filter(Boolean)
+  .join(' ');
+---
+
+{
+  external ? (
+    <a href={href} class={classes} target="_blank" rel="sponsored noopener noreferrer">
+      <slot />
+    </a>
+  ) : (
+    <a href={href} class={classes}>
+      <slot />
+    </a>
+  )
+}

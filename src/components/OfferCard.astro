@@ -1,0 +1,25 @@
+---
+import { getEntry, type CollectionEntry } from 'astro:content';
+
+interface Props {
+  offer: CollectionEntry<'marketplace'>;
+}
+
+const { offer } = Astro.props;
+const provider = await getEntry(offer.data.provider);
+---
+
+<div class="small-card offer-card">
+  {offer.data.featured && <span class="featured-badge">Featured</span>}
+  {provider && <span class="provider-name">{provider.data.name}</span>}
+  <h3>{offer.data.title}</h3>
+  <p>{offer.data.summary}</p>
+  <a
+    href={offer.data.affiliateUrl}
+    class="button"
+    target="_blank"
+    rel="sponsored noopener noreferrer"
+  >
+    {offer.data.buttonText}
+  </a>
+</div>

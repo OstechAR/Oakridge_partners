@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../utils/site';
+
+interface Props {
+  category: CollectionEntry<'categories'>;
+}
+
+const { category } = Astro.props;
+---
+
+<div class="card">
+  <h3>{category.data.homeCardTitle}</h3>
+  <p>{category.data.homeCardDescription}</p>
+  <a href={withBase(`${category.id}.html`)}>Learn More →</a>
+</div>
