@@ -7,7 +7,7 @@
     "description": "Check your Equifax score as often as you like and get personalized suggestions for raising it.",
     "image": "images/products/placeholder-product.svg",
     "cta": "Check your score",
-    "affiliate": "https://cmi.rocks/go/6a5e545663e02"
+    "affiliate": "https://cmi.rocks/go/6a6a3eb2d2bac"
   },
   {
     "id": 2,
@@ -41,13 +41,13 @@
   },
   {
     "id": 5,
-    "name": "Fig Loans",
+    "name": "Zippy Personal Loans",
     "category": "loans",
     "tagline": "Personal loans built to help you exit high-interest debt.",
     "description": "Fixed monthly payments and no prepayment penalties for borrowers rebuilding their credit.",
     "image": "images/products/placeholder-product.svg",
     "cta": "Explore loans",
-    "affiliate": "#"
+    "affiliate": "https://cmi.rocks/go/6a6a3ec991328"
   },
   {
     "id": 6,
