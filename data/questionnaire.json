@@ -1,0 +1,12 @@
+[
+    {
+        "id": "goals",
+        "question": "What primary goals are you aiming to achieve?",
+        "type": "checkbox",
+        "options": [
+            "Improve Credit Score",
+            "Protect Family / Assets",
+            "Grow a Business"
+        ]
+    }
+]
