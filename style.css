@@ -809,5 +809,68 @@ footer hr {
 
     }
 
+   .questionBlock {
+
+    background:white;
+
+    padding:2rem;
+
+    margin-bottom:1.5rem;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.questionBlock h3 {
+
+    margin-bottom:1rem;
+
+}
+
+
+.options {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+.option {
+
+    border:1px solid var(--border);
+
+    padding:1rem;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.option:hover {
+
+    border-color:var(--secondary);
+
+    background:#f8faf8;
+
+}
+
+
+.option input {
+
+    margin-right:10px;
+
+}
+
 
 }
