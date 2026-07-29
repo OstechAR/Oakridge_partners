@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Borrowell",
+    "name": "CompareHub",
     "category": "credit",
-    "tagline": "Free weekly credit score, no impact to your rating.",
+    "tagline": "Free credit score, no impact to your rating.",
     "description": "Check your Equifax score as often as you like and get personalized suggestions for raising it.",
     "image": "images/products/placeholder-product.svg",
     "cta": "Check your score",
-    "affiliate": "#"
+    "affiliate": "https://cmi.rocks/go/6a5e545663e02"
   },
   {
     "id": 2,
