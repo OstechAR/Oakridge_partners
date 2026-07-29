@@ -1,0 +1,14 @@
+{
+  "Improve my credit": ["credit"],
+  "Find a credit card": ["credit-cards"],
+  "Get insurance": ["insurance"],
+  "Buy or refinance a home": ["mortgages"],
+  "Consolidate debt": ["loans"],
+  "Switch banks": ["banking"],
+  "Grow my business": ["business"],
+
+  "Building credit from scratch": ["credit"],
+  "Rebuilding after a setback": ["credit", "loans"],
+  "Steady and looking to optimize": ["credit-cards", "banking"],
+  "Running a small business": ["business"]
+}

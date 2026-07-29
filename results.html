@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your matches — Oakridge Partners</title>
+  <meta name="description" content="Financial products matched to your questionnaire answers." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="nav-logo" href="index.html" aria-label="Oakridge Partners home">
+        <img src="images/logo.svg" alt="Oakridge Partners" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="questionnaire.html" class="nav-cta">Retake &rarr;</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tight">
+      <div class="container">
+        <p class="eyebrow">Your results</p>
+        <h1 style="margin: 12px 0 8px; font-size: clamp(1.8rem, 3vw, 2.4rem);">Here's what fits</h1>
+        <p id="results-summary" style="color: var(--oak-forest-light); margin-bottom: 8px;"></p>
+        <a href="questionnaire.html" id="results-empty-retake" class="btn btn-secondary" style="display:none; margin-top: 14px;">Retake the questionnaire</a>
+      </div>
+    </section>
+
+    <section class="tight">
+      <div class="container">
+        <div class="product-grid" id="results-grid">
+          <p style="color: var(--oak-sage);">Loading your matches&hellip;</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="disclosure-bar">
+    These results are based on informational matching, not personalized financial advice. <a href="disclosure.html">Read our disclosure</a>.
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span data-year></span> Oakridge Partners</span>
+        <a href="index.html" style="text-decoration:none;">Back to home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/results.js"></script>
+</body>
+</html>

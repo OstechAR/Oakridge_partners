@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get matched — Oakridge Partners</title>
+  <meta name="description" content="Answer a short questionnaire to see which financial products fit your situation." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/questionnaire.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="nav-logo" href="index.html" aria-label="Oakridge Partners home">
+        <img src="images/logo.svg" alt="Oakridge Partners" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="questionnaire.html" class="nav-cta" aria-current="page">Get matched &rarr;</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="qz-shell" id="qz-shell">
+      <!-- questionnaire.js renders question content here -->
+      <p style="text-align:center; color: var(--oak-sage);">Loading questionnaire&hellip;</p>
+    </div>
+  </main>
+
+  <footer class="site-footer" style="margin-top: 0;">
+    <div class="container">
+      <p class="footer-note" style="margin: 0 auto;">This questionnaire helps narrow down product categories based on what you tell us. It is not personalized financial advice — see our <a href="disclosure.html">disclosure</a> for details.</p>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/questionnaire.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* ===========================================================
+   Questionnaire — progress is shown as growth rings.
+   Each answered question adds a ring, echoing the site's
+   oak-cross-section motif instead of a generic progress bar.
+   =========================================================== */
+
+.qz-shell {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 70px 28px 100px;
+}
+
+.qz-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 46px;
+}
+
+.qz-progress svg { display: block; }
+
+.qz-progress-label {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--oak-sage);
+  margin-top: 10px;
+}
+
+.qz-card {
+  background: #fff;
+  border: 1px solid var(--oak-line);
+  border-radius: 4px;
+  padding: 44px 40px;
+}
+
+.qz-question {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.qz-helper {
+  color: var(--oak-sage);
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+
+.qz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.qz-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--oak-line);
+  border-radius: 3px;
+  padding: 15px 18px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.qz-option:hover { border-color: var(--oak-amber); }
+
+.qz-option input {
+  accent-color: var(--oak-forest);
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.qz-option.selected {
+  border-color: var(--oak-amber);
+  background: rgba(182, 123, 61, 0.06);
+}
+
+.qz-option span { font-size: 0.98rem; }
+
+.qz-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qz-error {
+  color: #A6432F;
+  font-size: 0.85rem;
+  margin: -18px 0 20px;
+  display: none;
+}
+.qz-error.visible { display: block; }
+
+@media (max-width: 640px) {
+  .qz-card { padding: 32px 24px; }
+}

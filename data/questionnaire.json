@@ -1,0 +1,40 @@
+[
+  {
+    "id": "goals",
+    "question": "What are you looking to do right now?",
+    "helper": "Choose as many as apply.",
+    "type": "checkbox",
+    "options": [
+      "Improve my credit",
+      "Find a credit card",
+      "Get insurance",
+      "Buy or refinance a home",
+      "Consolidate debt",
+      "Switch banks",
+      "Grow my business"
+    ]
+  },
+  {
+    "id": "timeline",
+    "question": "When do you need this in place?",
+    "helper": "This helps us prioritize what to show first.",
+    "type": "radio",
+    "options": [
+      "Right away",
+      "Within a few months",
+      "Just exploring options"
+    ]
+  },
+  {
+    "id": "situation",
+    "question": "Which best describes your situation?",
+    "helper": "We use this to filter out products that won't fit.",
+    "type": "radio",
+    "options": [
+      "Building credit from scratch",
+      "Rebuilding after a setback",
+      "Steady and looking to optimize",
+      "Running a small business"
+    ]
+  }
+]

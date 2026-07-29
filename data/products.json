@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Borrowell",
+    "category": "credit",
+    "tagline": "Free weekly credit score, no impact to your rating.",
+    "description": "Check your Equifax score as often as you like and get personalized suggestions for raising it.",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "Check your score",
+    "affiliate": "#"
+  },
+  {
+    "id": 2,
+    "name": "CompareHub Credit Cards",
+    "category": "credit-cards",
+    "tagline": "Side-by-side comparison of Canadian credit cards.",
+    "description": "Filter by annual fee, rewards type, and interest rate to find a card that fits how you actually spend.",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "Compare cards",
+    "affiliate": "#"
+  },
+  {
+    "id": 3,
+    "name": "Wawanesa Home & Auto",
+    "category": "insurance",
+    "tagline": "Bundled home and auto quotes in under 5 minutes.",
+    "description": "Get a no-obligation quote and see how bundling could lower your monthly premium.",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "Get a quote",
+    "affiliate": "#"
+  },
+  {
+    "id": 4,
+    "name": "Nesto Mortgages",
+    "category": "mortgages",
+    "tagline": "Commission-free mortgage advice, online.",
+    "description": "Compare fixed and variable rates from multiple lenders without visiting a branch.",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "See today's rates",
+    "affiliate": "#"
+  },
+  {
+    "id": 5,
+    "name": "Fig Loans",
+    "category": "loans",
+    "tagline": "Personal loans built to help you exit high-interest debt.",
+    "description": "Fixed monthly payments and no prepayment penalties for borrowers rebuilding their credit.",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "Explore loans",
+    "affiliate": "#"
+  },
+  {
+    "id": 6,
+    "name": "EQ Bank",
+    "category": "banking",
+    "tagline": "No-fee daily banking with a competitive savings rate.",
+    "description": "Everyday chequing and savings in one account, with no monthly fees or minimum balance.",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "Open an account",
+    "affiliate": "#"
+  },
+  {
+    "id": 7,
+    "name": "Thinkific Merchant Services",
+    "category": "business",
+    "tagline": "Payment processing built for small and growing businesses.",
+    "description": "Transparent per-transaction pricing with next-day payouts and no long-term contract.",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "Compare rates",
+    "affiliate": "#"
+  }
+]
