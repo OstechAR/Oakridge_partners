@@ -242,16 +242,110 @@ const questions = [
 
 let currentQuestion = 0;
 
-let answers = [];
+function loadQuestionnaire() {
+
+    if (!questionContainer)
+        return;
 
 
-
-const questionContainer =
-document.getElementById("questionContainer");
+    questionContainer.innerHTML = "";
 
 
-const nextButton =
-document.getElementById("nextButton");
+    questions.forEach((question, questionIndex) => {
+
+
+        const questionBlock = document.createElement("div");
+
+        questionBlock.className = "questionBlock";
+
+
+        questionBlock.innerHTML = `
+
+            <h3>
+                ${questionIndex + 1}. ${question.question}
+            </h3>
+
+            <div class="options">
+
+                ${
+                    question.options.map((option, index)=>`
+
+                        <label class="option">
+
+                            <input 
+                            type="radio"
+                            name="question-${questionIndex}"
+                            value="${option.category}"
+                            >
+
+                            ${option.text}
+
+                        </label>
+
+                    `).join("")
+                }
+
+            </div>
+
+        `;
+
+
+        questionContainer.appendChild(questionBlock);
+
+
+    });
+
+
+    questionContainer.innerHTML += `
+
+        <button 
+        type="button"
+        id="submitQuestionnaire"
+        class="primaryButton">
+
+        View Results
+
+        </button>
+
+    `;
+
+
+    document
+    .getElementById("submitQuestionnaire")
+    .addEventListener("click",()=>{
+
+
+        answers = [];
+
+
+        questions.forEach((question,index)=>{
+
+
+            const selected =
+            document.querySelector(
+                `input[name="question-${index}"]:checked`
+            );
+
+
+            if(selected){
+
+                answers.push(
+                    selected.value
+                );
+
+            }
+
+
+        });
+
+
+        showResults();
+
+
+    });
+
+
+}
 
 
 const backButton =
