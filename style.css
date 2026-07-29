@@ -892,3 +892,37 @@ footer hr {
 .option input {
     margin-right: 12px;
 }
+
+#questionContainer {
+    display: block !important;
+}
+
+
+#questionContainer .options,
+#questionContainer div.options {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    width: 100% !important;
+
+    gap: 15px !important;
+
+}
+
+
+#questionContainer label {
+
+    display: block !important;
+
+    width: 100% !important;
+
+}
+
+
+#questionContainer input[type="radio"] {
+
+    margin-right: 10px;
+
+}
