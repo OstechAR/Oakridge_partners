@@ -872,5 +872,25 @@ footer hr {
 
 }
 
+   /* Questionnaire answer layout */
+
+.options {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 12px;
+}
+
+
+.option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.option input {
+    margin-right: 12px;
+}
 
 }
