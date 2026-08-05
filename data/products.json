@@ -61,12 +61,12 @@
   },
   {
     "id": 7,
-    "name": "Thinkific Merchant Services",
+    "name": "Abria Capital",
     "category": "business",
-    "tagline": "Payment processing built for small and growing businesses.",
-    "description": "Transparent per-transaction pricing with next-day payouts and no long-term contract.",
+    "tagline": "Capital, insurance, and administrative solutions for your business",
+    "description": "No online application. No robo calls. A personal experience for your specific story",
     "image": "images/products/placeholder-product.svg",
-    "cta": "Compare rates",
+    "cta": "Contact Us",
     "affiliate": "#"
   }
 ]
