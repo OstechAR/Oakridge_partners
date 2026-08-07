@@ -4,7 +4,7 @@
     "name": "CompareHub",
     "category": "credit",
     "tagline": "Free credit score, no impact to your rating.",
-    "description": "Check your Equifax score as often as you like and get personalized suggestions for raising it.",
+    "description": "Check your Equifax score as often as you like and get suggestions for raising it.",
     "image": "images/products/placeholder-product.svg",
     "cta": "Check your score",
     "affiliate": "https://cmi.rocks/go/6a6a3eb2d2bac"
@@ -31,13 +31,13 @@
   },
   {
     "id": 4,
-    "name": "Nesto Mortgages",
-    "category": "mortgages",
-    "tagline": "Commission-free mortgage advice, online.",
+    "name": "Rate Genie Personal Loan",
+    "category": "loans",
+    "tagline": "Personal loans to bridge your paycheques",
     "description": "Compare fixed and variable rates from multiple lenders without visiting a branch.",
     "image": "images/products/placeholder-product.svg",
     "cta": "See today's rates",
-    "affiliate": "#"
+    "affiliate": "https://cmi.rocks/go/6a75fd6200f57"
   },
   {
     "id": 5,
