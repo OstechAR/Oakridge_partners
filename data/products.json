@@ -33,7 +33,7 @@
     "id": 4,
     "name": "Rate Genie Personal Loan",
     "category": "loans",
-    "tagline": "Personal loans to bridge your paycheques",
+    "tagline": "Side by side personal loan comparison",
     "description": "Compare fixed and variable rates from multiple lenders without visiting a branch.",
     "image": "images/products/placeholder-product.svg",
     "cta": "See today's rates",
@@ -67,6 +67,16 @@
     "description": "No online application. No robo calls. A personal experience for your specific story",
     "image": "images/products/placeholder-product.svg",
     "cta": "Contact Us",
-    "affiliate": "#"
+    "affiliate": "mailto:ericfrancaturner@gmail.com?subject=Business loan inquiry"
   }
+  {
+    "id": 8,
+    "name": "MyAutoApproval Loans",
+    "category": "loans",
+    "tagline": "Side by side auto loan comparison",
+    "description": "Compare fixed and variable rates from multiple lenders without visiting a branch.",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "See today's rates",
+    "affiliate": "https://cmi.rocks/go/6a75fe9dbd4fe"
+  },
 ]
