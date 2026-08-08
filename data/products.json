@@ -51,13 +51,13 @@
   },
   {
     "id": 6,
-    "name": "EQ Bank",
+    "name": "Wealthsimple",
     "category": "banking",
-    "tagline": "No-fee daily banking with a competitive savings rate.",
-    "description": "Everyday chequing and savings in one account, with no monthly fees or minimum balance.",
+    "tagline": "No-fee daily banking and investment platform",
+    "description": "Everyday banking and investments! Open and fund a chequing account within 30 days for an exclusive bonus!",
     "image": "images/products/placeholder-product.svg",
     "cta": "Open an account",
-    "affiliate": "#"
+    "affiliate": "wealthsimple.com/invite/L3PGTG"
   },
   {
     "id": 7,
