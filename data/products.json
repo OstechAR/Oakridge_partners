@@ -71,6 +71,16 @@
   },
   {
     "id": 8,
+    "name": "Honest Loans",
+    "category": "loans",
+    "tagline": "Fast approval!",
+    "description": "Fast approval personal loans up to $50,000",
+    "image": "images/products/placeholder-product.svg",
+    "cta": "Apply Now",
+    "affiliate": "https://www.honestloans.net/?id=u67OGw00_7sRCRaXSOVi3zae_EbD3lF6WEZMcR7PQwI.&subId=[SUB_ID_VALUE]&subId2=[SUB_ID2_VALUE]&subId3=[clickId]&firstName=[firstName]&lastName=[lastName]&email=[email"
+  },
+  {
+    "id": 9,
     "name": "MyAutoApproval Loans",
     "category": "loans",
     "tagline": "Side by side auto loan comparison",
