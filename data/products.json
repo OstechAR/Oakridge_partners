@@ -11,13 +11,13 @@
   },
   {
     "id": 2,
-    "name": "CompareHub Credit Cards",
-    "category": "credit-cards",
-    "tagline": "Side-by-side comparison of Canadian credit cards.",
-    "description": "Filter by annual fee, rewards type, and interest rate to find a card that fits how you actually spend.",
+    "name": "Neo",
+    "category": "banking",
+    "tagline": "No fee daily banking and credit building!",
+    "description": "Open a no fee chequing account and build your credit with a guaranteed prepaid MasterCard today!",
     "image": "images/products/placeholder-product.svg",
-    "cta": "Compare cards",
-    "affiliate": "#"
+    "cta": "Open Account",
+    "affiliate": "https://neo.cc/refer/Z9G4K7H8&utm_source=referral&utm_channel=customer"
   },
   {
     "id": 3,
