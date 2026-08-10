@@ -11,23 +11,23 @@
   },
   {
     "id": 2,
-    "name": "Neo",
+    "name": "Neo Financial",
     "category": "banking",
     "tagline": "No fee daily banking and credit building!",
     "description": "Open a no fee chequing account and build your credit with a guaranteed prepaid MasterCard today!",
     "image": "images/products/placeholder-product.svg",
-    "cta": "Open Account",
+    "cta": "Open an Account",
     "affiliate": "https://neo.cc/refer/Z9G4K7H8&utm_source=referral&utm_channel=customer"
   },
   {
     "id": 3,
-    "name": "Wawanesa Home & Auto",
-    "category": "insurance",
-    "tagline": "Bundled home and auto quotes in under 5 minutes.",
-    "description": "Get a no-obligation quote and see how bundling could lower your monthly premium.",
+    "name": "Simplii Financial",
+    "category": "banking",
+    "tagline": "No fee daily banking with competitive savings interest!",
+    "description": "Get a signing bonus when you open a high interest savings and chequing account!",
     "image": "images/products/placeholder-product.svg",
-    "cta": "Get a quote",
-    "affiliate": "#"
+    "cta": "Open an Account",
+    "affiliate": "https://blue.mbsy.co/7hcPLJ"
   },
   {
     "id": 4,
@@ -56,7 +56,7 @@
     "tagline": "No-fee daily banking and investment platform",
     "description": "Everyday banking and investments! Open and fund a chequing account within 30 days for an exclusive bonus!",
     "image": "images/products/placeholder-product.svg",
-    "cta": "Open an account",
+    "cta": "Open an Account",
     "affiliate": "https://wealthsimple.com/invite/L3PGTG"
   },
   {
