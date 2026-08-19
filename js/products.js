@@ -1,6 +1,11 @@
 /* Loads data/products.json and turns product objects into card markup.
    Used by results.js (and available to any future page that wants
-   to show a product grid, e.g. a category page under /learn). */
+   to show a product grid, e.g. a category page under /learn).
+
+   A product can optionally include a "features" array of short
+   strings — if present, they're rendered as a bullet list on the
+   card, above the button. Products without "features" render exactly
+   as before. */
 
 async function getAllProducts() {
   const products = await loadJSON("data/products.json");
@@ -19,10 +24,20 @@ function productCardHTML(product) {
       </div>
       <p class="product-card-tagline">${product.tagline || ""}</p>
       <p class="product-card-desc">${product.description || ""}</p>
+      ${productFeaturesHTML(product.features)}
       <a class="btn btn-primary" href="${product.affiliate || "#"}" target="_blank" rel="noopener sponsored">
         ${product.cta || "Learn more"} &rarr;
       </a>
     </article>
+  `;
+}
+
+function productFeaturesHTML(features) {
+  if (!features || !features.length) return "";
+  return `
+    <ul class="product-features">
+      ${features.map((f) => `<li>${f}</li>`).join("")}
+    </ul>
   `;
 }
 
