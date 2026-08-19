@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <!-- Consent defaults — must run before the GA tag loads.
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Oakridge Partners</title>
+  <meta name="description" content="What data Oakridge Partners collects and how it's used." />
+
+  <!-- Consent defaults — must run before the GA tag loads.
        Blocks analytics storage until the visitor accepts the cookie banner. -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -23,10 +28,7 @@
     gtag('js', new Date());
     gtag('config', 'G-HE2NVQL136');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Oakridge Partners</title>
-  <meta name="description" content="What data Oakridge Partners collects and how it's used." />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -41,6 +43,7 @@
       </button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="learn.html">Learn</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="questionnaire.html" class="nav-cta">Get matched &rarr;</a></li>
@@ -55,17 +58,26 @@
         <h1 style="margin: 12px 0 20px;">Privacy policy</h1>
         <p style="color: var(--oak-sage); font-size: 0.9rem;">Last updated <span data-year></span></p>
 
-        <h2 style="margin-top: 34px;">What we store</h2>
-        <p>Your questionnaire answers are saved in your browser's local storage so the results page can read them. They are not sent to, or stored on, an Oakridge Partners server. Clearing your browser data removes them.</p>
+        <h2 style="margin-top: 34px;">What we store locally</h2>
+        <p>Your questionnaire answers are saved in your browser's local storage so the results page can read them. They are not sent to, or stored on, an Oakridge Partners server. Clearing your browser data removes them. This storage is essential to how the questionnaire works and isn't affected by the cookie choice described below.</p>
 
-        <h2 style="margin-top: 34px;">Analytics</h2>
-        <p>We may use privacy-respecting analytics to understand which pages are visited and which questionnaire steps people drop off at. This is aggregate, not tied to your name or contact details.</p>
+        <h2 style="margin-top: 34px;">Analytics cookies (Google Analytics)</h2>
+        <p>We use Google Analytics to understand which pages are visited, which questionnaire steps people complete or leave, and roughly where visitors come from. This is aggregate usage data — it is not used to identify you personally, and we do not sell it.</p>
+        <p>Analytics only runs if you accept the cookie banner shown on your first visit. If you decline, Google Analytics does not load and no analytics cookies are set. You can change your choice at any time using the button below.</p>
+        <p>
+          <button type="button" class="btn btn-secondary" onclick="if(window.OakridgeConsent) window.OakridgeConsent.open();">
+            Manage cookie preferences
+          </button>
+        </p>
 
         <h2 style="margin-top: 34px;">Third-party links</h2>
-        <p>When you click through to a product provider, you leave this site and are subject to that provider's own privacy policy. We don't control, and aren't responsible for, how they handle your data.</p>
+        <p>When you click through to a product provider, you leave this site and are subject to that provider's own privacy policy, including any cookies or tracking they use to attribute referrals. We don't control, and aren't responsible for, how they handle your data.</p>
+
+        <h2 style="margin-top: 34px;">Your choices</h2>
+        <p>You can decline analytics cookies, clear your browser's local storage at any time to remove saved questionnaire answers, and use your browser's cookie settings to block or delete cookies generally. Declining analytics does not affect your ability to use the questionnaire or view results.</p>
 
         <h2 style="margin-top: 34px;">Contact</h2>
-        <p>Questions about this policy can be sent through the contact details on our <a href="about.html" style="color: var(--oak-amber-dark);">About</a> page.</p>
+        <p>Questions about this policy, or requests regarding your data, can be sent through the contact details on our <a href="about.html" style="color: var(--oak-amber-dark);">About</a> page.</p>
       </div>
     </section>
   </main>
