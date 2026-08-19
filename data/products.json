@@ -18,16 +18,26 @@
     "image": "images/products/placeholder-product.svg",
     "cta": "Open an Account",
     "affiliate": "https://neo.cc/refer/Z9G4K7H8&utm_source=referral&utm_channel=customer"
+    "features": [
+     "No monthly fees",
+     "High interest savings options",
+     "Free Interac e-Transfers"
+   ]
   },
   {
     "id": 3,
     "name": "Simplii Financial",
     "category": "banking",
     "tagline": "No fee daily banking with competitive savings interest!",
-    "description": "Get a signing bonus when you open a high interest savings and chequing account!",
+    "description": "Get a signing bonus when you open a high-interest savings and chequing account!",
     "image": "images/products/placeholder-product.svg",
     "cta": "Open an Account",
     "affiliate": "https://blue.mbsy.co/7hcPLJ"
+    "features": [
+     "No monthly fees",
+     "High interest savings options",
+     "Free Interac e-Transfers"
+   ]
   },
   {
     "id": 4,
@@ -60,8 +70,8 @@
    "affiliate": "https://wealthsimple.com/invite/L3PGTG",
    "features": [
      "No monthly fees",
-     "2.5% interest on your cash balance",
-     "No minimum balance required",
+     "No fee investing",
+     "ATM fee refunds",
      "Free Interac e-Transfers"
    ]
   },
