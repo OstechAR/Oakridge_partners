@@ -50,14 +50,20 @@
     "affiliate": "https://cmi.rocks/go/6a6a3ec991328"
   },
   {
-    "id": 6,
-    "name": "Wealthsimple",
-    "category": "banking",
-    "tagline": "No-fee daily banking and investment platform",
-    "description": "Everyday banking and investments! Open and fund a chequing account within 30 days for an exclusive bonus!",
-    "image": "images/products/placeholder-product.svg",
-    "cta": "Open an Account",
-    "affiliate": "https://wealthsimple.com/invite/L3PGTG"
+   "id": 6,
+   "name": "Wealthsimple",
+   "category": "banking",
+   "tagline": "No-fee daily banking and investment platform",
+   "description": "Everyday banking and investments! Open and fund a chequing account within 30 days for an exclusive bonus!",
+   "image": "images/products/placeholder-product.svg",
+   "cta": "Open an account",
+   "affiliate": "https://wealthsimple.com/invite/L3PGTG",
+   "features": [
+     "No monthly fees",
+     "2.5% interest on your cash balance",
+     "No minimum balance required",
+     "Free Interac e-Transfers"
+   ]
   },
   {
     "id": 7,
